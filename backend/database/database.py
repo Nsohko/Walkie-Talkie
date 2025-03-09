@@ -19,15 +19,15 @@ pdf_paths = [
 
 if not os.environ.get("OPENAI_API_KEY"):
     os.environ["OPENAI_API_KEY"] = "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"
-os.environ["IRIS_HOSTNAME"] = r"hh-db.up.railway.app:1972"
 
 # Connect to IRIS database
 username = 'demo'
 password = 'demo'
-hostname = os.getenv('IRIS_HOSTNAME', 'localhost:1972')
+hostname = os.getenv('IRIS_HOSTNAME', 'localhost')
+port = 1972
 namespace = 'USER'
-CONNECTION_STRING = f"{hostname}/{namespace}"
-sql_conn = f"iris://{username}:{password}@{hostname}/{namespace}"
+CONNECTION_STRING = f"{hostname}:{port}/{namespace}"
+sql_conn = f"iris://{username}:{password}@{hostname}:{port}/{namespace}"
 
 def init_database():
     print(CONNECTION_STRING)
