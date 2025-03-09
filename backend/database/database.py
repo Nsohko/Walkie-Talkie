@@ -33,7 +33,7 @@ def init_database():
     print(CONNECTION_STRING)
 
     # Connect to InterSystems IRIS
-    conn = iris.connect(CONNECTION_STRING, username, password, ssl=True)
+    conn = iris.connect(CONNECTION_STRING, username, password)
     cursor = conn.cursor()
 
     cursor.execute("SET OPTION PKEY_IS_IDKEY = true")

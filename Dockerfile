@@ -15,6 +15,13 @@ COPY backend/ ./backend/
 WORKDIR /app/backend
 RUN pip install --no-cache-dir -r requirements.txt gunicorn
 RUN pip install ./install/intersystems_irispython-5.0.1-8026-cp38.cp39.cp310.cp311.cp312-cp38.cp39.cp310.cp311.cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+# Set environment variable
+ARG OPENAI_API_KEY
+ENV OPENAI_API_KEY=$OPENAI_API_KEY
+# Set environment variable
+ARG IRIS_HOSTNAME
+ENV IRIS_HOSTNAME=$IRIS_HOSTNAME
+
 
 # Step 3: Combine frontend build with backend
 WORKDIR /app
