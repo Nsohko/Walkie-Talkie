@@ -6,6 +6,15 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 import json
 
+# Fix SSL certificate verification issues
+import ssl
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
+
 from langchain_iris import IRISVector
 
 # Dynamically find all PDFs in the 'data' directory relative to this module
@@ -17,8 +26,9 @@ pdf_paths = [
     os.path.join(DATA_DIR, f) for f in os.listdir(DATA_DIR) if f.endswith(".pdf")
 ]
 
-#if not os.environ.get("OPENAI_API_KEY"):
-#    os.environ["OPENAI_API_KEY"] = "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"
+if not os.environ.get("OPENAI_API_KEY"):
+    os.environ["OPENAI_API_KEY"] = "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"
+#os.environ["IRIS_HOSTNAME"] = r"hopper.proxy.rlwy.net"
 
 # Connect to IRIS database
 username = 'demo'
