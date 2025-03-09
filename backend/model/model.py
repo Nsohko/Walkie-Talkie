@@ -9,7 +9,7 @@ from langchain_iris import IRISVector
 
 #if not os.environ.get("OPENAI_API_KEY"):
 #    os.environ["OPENAI_API_KEY"] = "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"
-
+#
 class myModel:
     def __init__(self):
         username = 'demo'
