@@ -20,14 +20,17 @@ Clone this repo via ...
 
 cd into the directory
 
+Note: You will need an OpenAI API key with credits to use this app.
+
 ### 1. Quick Set Up Via Docker
 Please ensure that Docker is installed.
 Then enter the following commands
 
 ```
 docker build -t walkie-talkie .
-docker run -p 5000:5000 walkie-talkie
+docker run -e OPENAI_API_KEY="YOUR-OPENAI-API-KEY-HERE" -p 5000:5000 walkie-talkie
 ```
+Please replace the "YOUR-OPENAI-API-KEY-HERE" in the above command with your actual openAI API key.
 The service should be accessible at [https://localhost:5000](https://localhost:5000)
 
 ### Developer Setup via Anaconda
@@ -36,6 +39,11 @@ Ensure that conda, node.js and yarn are installed.
 Create a new conda env, and activate it:
 ```
 conda create --name myenv python=3.10
+```
+
+In the project rppt, create .env file with your openAI API Key.
+```commandline
+OPENAI_API_KEY=YOUR-KEY-HERE
 ```
 
 #### Starting IRIS database

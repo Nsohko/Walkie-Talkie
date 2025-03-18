@@ -9,9 +9,9 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langgraph.graph import START, StateGraph
 from typing_extensions import List, TypedDict
 from langchain.prompts import PromptTemplate
+from dotenv import load_dotenv
 
-if not os.environ.get("OPENAI_API_KEY"):
-    os.environ["OPENAI_API_KEY"] = "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"
+load_dotenv()
 
 embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
 

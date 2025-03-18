@@ -5,6 +5,8 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 import json
+from dotenv import load_dotenv
+load_dotenv()
 
 # Fix SSL certificate verification issues
 import ssl

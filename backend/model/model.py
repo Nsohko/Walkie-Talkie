@@ -6,6 +6,9 @@ from langchain.chat_models import init_chat_model
 from langchain_openai import OpenAIEmbeddings
 import datetime
 from langchain_iris import IRISVector
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class myModel:
     def __init__(self):

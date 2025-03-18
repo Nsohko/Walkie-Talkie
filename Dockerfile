@@ -16,8 +16,7 @@ WORKDIR /app/backend
 RUN pip install --no-cache-dir -r requirements.txt gunicorn
 RUN pip install ./install/intersystems_irispython-5.0.1-8026-cp38.cp39.cp310.cp311.cp312-cp38.cp39.cp310.cp311.cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
 # Set environment variable
-ARG OPENAI_API_KEY="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"
-ENV OPENAI_API_KEY=$OPENAI_API_KEY
+ENV OPENAI_API_KEY=""
 # Set environment variable
 ARG IRIS_HOSTNAME="localhost"
 ENV IRIS_HOSTNAME=$IRIS_HOSTNAME

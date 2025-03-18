@@ -4,6 +4,7 @@ from flask_session import Session
 import os
 import uuid  # To generate unique session IDs
 from datetime import timedelta
+from dotenv import load_dotenv
 
 # Import your model class
 from model import myModel
@@ -13,7 +14,7 @@ app = Flask(__name__, static_folder="../frontend/build", static_url_path="/")
 app.config["PERMANENT_SESSION_LIFETIME"] = timedelta(minutes=30)
 CORS(app, supports_credentials=True, resources={r"/*": {"origins": "http://localhost:3000"}})
 
-
+load_dotenv()
 
 # Configure Flask-Session
 app.config["SESSION_TYPE"] = "filesystem"  # Stores sessions in files (can be changed to Redis/DB)
