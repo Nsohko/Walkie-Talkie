@@ -26,9 +26,6 @@ pdf_paths = [
     os.path.join(DATA_DIR, f) for f in os.listdir(DATA_DIR) if f.endswith(".pdf")
 ]
 
-if not os.environ.get("OPENAI_API_KEY"):
-    os.environ["OPENAI_API_KEY"] = "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"
-#os.environ["IRIS_HOSTNAME"] = r"hopper.proxy.rlwy.net"
 
 # Connect to IRIS database
 username = 'demo'

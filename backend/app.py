@@ -50,7 +50,7 @@ def start_session():
         return jsonify({"sessionId": session_id})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
+
 @app.route("/api/end-session", methods=["POST"])
 def end_session():
     """Remove chatbot session when the user leaves."""
@@ -136,10 +136,11 @@ FRONTEND_BUILD_PATH = os.path.abspath(os.path.join(os.getcwd(), "../frontend/bui
 def serve_static_files(path):
     """Serve React static files or fallback to index.html for React Router."""
     file_path = os.path.join(FRONTEND_BUILD_PATH, path)
+    print(file_path)
 
     # If the requested file exists, serve it
     if os.path.exists(file_path):
-        return send_from_directory(FRONTEND_BUILD_PATH, path)
+        return send_from_directory(FRONTEND_BUILD_PATH, "index.html")
 
     # Otherwise, serve React's index.html (to handle client-side routing)
     return send_from_directory(FRONTEND_BUILD_PATH, "index.html")
