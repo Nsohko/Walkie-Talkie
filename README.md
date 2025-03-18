@@ -16,9 +16,11 @@ Please see the video below for further information:
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Gzx_ZwWr_OU/0.jpg)](https://www.youtube.com/watch?v=Gzx_ZwWr_OU)
 
 ## Setup Instructions
-Clone this repo via ...
-
-cd into the directory
+Clone this repo via
+```
+git clone https://github.com/Nsohko/Walkie-Talkie.git
+cd Walkie-Talkie
+```
 
 Note: You will need an OpenAI API key with credits to use this app.
 
