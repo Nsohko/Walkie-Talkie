@@ -1,7 +1,7 @@
-# WALKIE - TALKIE
+# WALKIE-TALKIE
 ## By Ready.Set.Go Tech
 
-Welcome to the Walkie - Talkie: A tool aimed at educating, engaging and empowering our elderly while
+Welcome to the Walkie-Talkie: A tool aimed at educating, engaging and empowering our elderly while
 complementing our healthcare services.
 
 Walkie-Talkie is an AI-driven chatbot designed to assist elderly users with daily engagement, cognitive stimulation, and health-related support. By integrating conversational AI with healthcare guidance, 
