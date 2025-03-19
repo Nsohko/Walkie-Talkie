@@ -29,7 +29,8 @@ Ensure that conda, node.js and yarn are installed.
 
 Create a new conda env, and activate it:
 ```
-conda create --name myenv python=3.10
+conda create --name walkietalkie python=3.10
+conda activate walkietalkie
 ```
 
 In the project root, create .env file with your openAI API Key.
