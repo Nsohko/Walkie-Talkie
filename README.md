@@ -63,6 +63,6 @@ yarn start
 ```
 This will start the frontend
 
-The service will now be available at [https://localhost:3000](https://localhost:3000)
+The service will now be available at [http://localhost:3000/](http://localhost:3000/)
 
 
